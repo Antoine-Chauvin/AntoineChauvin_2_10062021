@@ -1,53 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
+/*global*/
 *{
-    box-sizing: border-box;
+    box-sizing: border-box ;
 }
 
 body{  
 
-    font-family: 'Raleway', sans-serif;   
+    font-family: 'Raleway', sans-serif ;   
+    margin: 0 ; 
     
 }
 
+.container{
+    max width: 1280px ;
+    padding: 25px ;
+    margin: auto ;
+}
+
 .stars{
-    max-width: 100%;
+    max-width: 100% ;
     max-height: 2em ;
-    display: flex;    
+    display: flex ;    
 } 
  
-a{
-    display: block;
+a{       
+    text-decoration: none; 
+    display: block ;
+    color: black;
 
 }
 
 p{
-    margin-top: 0%;
-    margin-bottom: 0.5em;
+    margin-top: 0% ; 
+    margin-bottom: 0.5em ;
 }
-
- h3{
-    margin: 0.5em;
- }
 
  h2{
      width: 100%;
+     margin-left: 2em;
  }
 
-.tete{
+
+section{ 
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+
+section a{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    float: left;
+    margin: 2em 1em;
+    /*height: 20%;*/
+    width: 25%;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+section a > img{
+    width: 100%;
+    border-radius: 4px 4px 0 0 ;
+}
+
+
+
+/* header */
+
+header{
     max-height: 5%;
     max-width: 100%;
     display:flex;
     justify-content:space-between;
 }
 
-.logo{ 
+header > img{  
     align-content: flex-start;
     
 }
 
-.top_nav{
+header nav{
 
    display: flex;
    width: 25%;
@@ -56,89 +95,128 @@ p{
        
 }
 
-.racourcis{
+header nav > a{
     margin: 5%;
 }
 
-.title{
+/* recerche */
+
+.title h2{
+    max-width: 50%;
+    margin-left: 0;
+}
+
+.barre_recherche{
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
+    height: 50px;
+    padding: 2px;
+    align-content: center;
+    margin-bottom: 10px;
+   
+}
+
+.pointeur{
+    background-color:#F2F2F2 ;
+    border-radius: 15px 0 0 15px;
+}
+
+.barre_recherche a {
+    
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none; 
+}
+
+.rechercher{
+    background-color:#0065fc ; 
+    border-radius: 0 15px 15px 0;
     
 }
+
+.rechercher p{
+    color:white ;
+}
+    
+.button{
+    display: flex;
+    
+    
+     
+}
+
+.button > h4{
+    height: 37px;
+    margin: 0;
+    padding-top: 7px;
+    
+}
+
+.button a {
+    display:flex ;
+    width: 18% ;      
+    
+}
+
+.button a div{
+    position: relative;
+    left: 35px;
+    bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color:#deebff;
+    border-radius: 100px;
+    padding: 20px;
+    z-index: 3; 
+    
+}
+
+.button a div i{
+    color: #0065fc;
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.button a p {
+    border: 2px solid #d9d9d9;
+    border-radius: 100px;
+    padding: 7px 15px 7px 40px;
+    z-index: 2;
+}
+
+/* section hébergement */
 
 .hebergement{
-    background-color: lightgray;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: center;
-    max-width: 60%;
-    border-radius: 3%;
-    margin-right: 0;
-    
-
-}
-
-.titre_section{
-    margin-left: 2em;
-    width:100%;
-}
-
-.carte_h{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    
-    background-color: white;
     float: left;
-    margin: 2em 1em;
-    height: 20%;
-    width: 25%;
-    padding: 4px;
-    border-radius: 4%;
-}
+    max-width: 60%;
+    margin-right: 40px;
+    
 
-.image_h{
-    width: 100%;
-    border-radius: 4% 4% 0 0 ;
-}
-
-.stars{
-    width: 100%;
-    height: 15%;
 }
 
 .menu_deroulent{
+    background-color: inherit;
     width: 100%;
     height: 3em;
     margin-left: 5%;
 
 }
 
+/* section populaire  */
+
 .populaire{
-    background-color: lightgray;
-    border-radius: 4%;
-    position: absolute;
-    right: 20px;
-    top: 36%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: center;  
+    float: left;
     max-width: 35%;
     padding: 0%;
 
 }
 
 .carte_p{
-    background-color: white;
-    border-radius: 4%;
-    display: flex;
-    flex-direction: row;
-    flex: wrap;
-    margin: 2em 1em;
+    flex-direction: row; 
     width: 80%;
-    padding: 4px;
 
 }
 
@@ -150,46 +228,51 @@ p{
 }
 
 
+/*  section activité */
 
-.activites{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+/* pour régler les pbls cette section soit passer en float left et zaper le flex,
+ soit encadrer les carte (sans le titre) par une div global -> elle en display flex */
+
+ .activites{
+    clear:both;
+    display: block;
     max-width: 90%;
     height: 600px;
     margin: 0;
 }
 
 .carte_ag{
-    border-radius: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column ;
-    width: 24%;
-    height: 100%;
+    height: 100%; /* pose pbl */
     margin: 0;
 }
 
 .img_g{
     border-radius: 15px  15px 0 0;
     width: 95%;
-    height: 85%;
+    height: 80%;
     object-fit: cover;
     
 }
-
-.activites  div{
+.activites > div:nth-child(2){
+    display: flex;
+     height: 600px; 
+}
+.activites .colonne{
     display: flex;
     flex-direction: column;
-    width: 24%;
+     width: 25%; 
+    height: 100; 
     margin: 0%;
     border-radius: 15px  15px 0 0;
+}
 
-    
+.activites .colonne a{
+    flex-direction: column;
+    width: 100%;
 }
 
 .img_p{
-    width: 95%;
+    width: 75%;
     border-radius: 15px  15px 0 0;
 
 }
@@ -199,9 +282,10 @@ p{
      object-fit: cover;
  }
 
+ /* footer */
 
  footer{
-     background-color: lightgray;
+     background-color: #F2F2F2;
      margin-top: 3em;
      padding: 1em 1em;
      display: flex;
@@ -210,3 +294,7 @@ p{
      justify-content:space-evenly;
      }
 
+     footer ul li {
+         display: block;
+        
+    }
