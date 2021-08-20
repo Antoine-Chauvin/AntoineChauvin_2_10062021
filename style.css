@@ -10,7 +10,7 @@ body {
     margin: 0;
 }
 
-.container {
+header, main {
     max-width: 1440px;
     padding: 25px;
     padding-top: 0;
@@ -74,33 +74,53 @@ section a>img {
 /* header */
 
 header {
-    max-width: 100%;
     display: flex;
-    justify-content: space-between;
 }
 
 header>img {
-    align-content: flex-start;
+    width: 70%;
+    height: 35px;
+    position: relative;
+    left: -32%;
+    top: 10%;
 }
 
 header nav {
     display: flex;
-    width: 25%;
     justify-content: space-evenly;
-    align-content: flex-end;
+   
+}
+
+header nav ul {
+    display: flex;
+    margin: 0%;
 }
 
 header nav ul li {
     display: inline-block;
-    margin: 4px;
+    margin: 0;
+    padding-top: 15px;
+    border-top: 2px solid white;
 }
 
 header nav ul li a {
     color: #0065fc;
+    padding: 0 20px;
 }
 
-header nav ul li a:hover {
-    border-top: 2px solid #0065fc;
+header nav ul li:hover {
+    border-top-color: #0065fc;
+}
+
+header>a {
+    color: #0065fc;
+    padding: 15px 20px 0;
+    border-top: 2px solid white;
+    font-weight: 600;
+}
+
+header>a:hover {
+    border-top-color: #0065fc;
 }
 
 /* recerche */
@@ -110,7 +130,7 @@ header nav ul li a:hover {
     margin-left: 0;
 }
 
-.barre_recherche {
+.title>div:nth-child(3) {
     overflow: hidden;
     display: flex;
     height: 50px;
@@ -119,52 +139,59 @@ header nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-.barre_recherche input::placeholder {
+.title>div:nth-child(3) input::placeholder {
     color: rgb(0, 0, 0);
     font-size: 20px;
     font-weight: bold;
 }
 
-.pointeur {
+.title>div:nth-child(3) a:nth-child(1) {
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
 }
 
-.barre_recherche a {
+.title>div:nth-child(3) a {
     color: black;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-.rechercher {
+.title>div:nth-child(3)>a:nth-child(3) {
     background-color: #0065fc;
     border-radius: 0 15px 15px 0;
 }
 
-.rechercher p {
+.title>div:nth-child(3)>a:nth-child(3) p {
     font-weight: bold;
     color: white;
 }
 
-.button {
+.title>div:nth-child(5) {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     padding: 10px;
 }
 
-.button>h4 {
-    width: 10%;
+.title>h4 {
+    float: left;
+    width: auto;
     height: 37px;
     margin: 0;
-    padding-top: 7px;
+    padding-top: 20px;
+    padding-right: 20px;
 }
 
-.button a {
-    width: 18%;
+.title>div:nth-child(5) a {
+    padding-right: 20px;
+    width: auto;
 }
 
-.button a span {
+.title>div:nth-child(5) a:hover {
+    color: #0065fc;
+}
+
+.title>div:nth-child(5) a span {
     position: relative;
     /* si décomenté donne aux background des icone une opaticté de 100% */
     display: flex;
@@ -176,15 +203,20 @@ header nav ul li a:hover {
     border-radius: 100px;
     padding: 20px;
     z-index: 3;
+    transition: transform .3s ease-in;
 }
 
-.button a span i {
+.title>div:nth-child(5) a span:hover {
+    transform: rotate(360deg);
+}
+
+.title>div:nth-child(5) a span i {
     color: #0065fc;
     max-width: 20px;
     max-height: 20px;
 }
 
-.button a p {
+.title>div:nth-child(5) a p {
     display: inline;
     position: relative;
     bottom: 28px;
@@ -267,21 +299,21 @@ header nav ul li a:hover {
     width: 50px;
 }
 
-.carte_p {
+.populaire>a {
     flex-direction: row;
     height: 150px;
     width: 350px;
     margin: 14px 16px;
 }
 
-.image_p {
+.populaire>a img {
     align-content: flex-start;
     border-radius: 4% 0 0 4%;
     height: 100%;
     width: 125px;
 }
 
-.carte_p div {
+.populaire>a div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -300,26 +332,26 @@ header nav ul li a:hover {
     background-color: white;
 }
 
-.carte_ag {
+#activites div>div:nth-child(2n+1) a {
     height: 440px;
     width: 305px;
     margin: 0 20px;
 }
 
-.img_g {
+#activites div>div:nth-child(2n+1) a img {
     border-radius: 25px 25px 0 0;
     width: 100%;
     height: 80%;
     object-fit: cover;
 }
 
-#activites>div:nth-child(2) {
+#activites>div {
     display: flex;
     justify-content: space-around;
     height: 440px;
 }
 
-#activites .colonne {
+#activites div>div:nth-child(2n) {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -329,20 +361,24 @@ header nav ul li a:hover {
     border-radius: 15px 15px 0 0;
 }
 
-#activites .colonne a {
+#activites div>div:nth-child(2n) a {
     flex-direction: column;
     width: 100%;
     margin: 5px;
 }
 
-.img_p {
+#activites div>div:nth-child(2n) a img {
     width: 100%;
     border-radius: 25px 25px 0 0;
 }
 
-#activites a[class*=carte] {
+#activites div>div a {
     padding: 0;
     border-radius: 25px;
+}
+
+#activites h3 {
+    padding-left: 15px;
 }
 
 /* footer */
@@ -363,4 +399,162 @@ footer ul {
 
 footer ul li {
     display: block;
+}
+
+/* responsive */
+
+@media screen and (max-width: 767px) {
+    /* mobile */
+    header {
+        height: 140px;
+        position: fixed;
+        top: 0;
+        background-color: white;
+        z-index: 1000;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    header>img {
+        height: 50%;
+        width: 80%;
+        left: -25%;
+        top: 10%;
+        
+    }
+    header nav {
+        width: 100%;
+        flex: 1;
+        order: 2;
+        padding-bottom: 10px;
+        
+    }
+    header nav>ul {
+        height: 50%;
+        width: 780px;
+        justify-content: space-between;
+        position: relative;
+        right: 10%;
+        
+       
+        
+    }
+    header>nav>ul>li {
+        width: 100%;
+        height: 100%;
+        padding: 50px 18%;
+        border-top: none;
+        border-bottom: 3px solid grey ;       
+
+    }
+
+    header nav>ul>li>a {
+        width: 100%;
+        font-size: 1.3em;
+        
+    }
+    header>a {
+        order: 1;
+        height: 50%;
+        width: 20%;
+        font-size: 1.2em;
+        position: relative;
+        right: 14%;
+        top: 13%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 0;
+        position: relative;
+        top: 140px;
+    }
+    .title, .point_infos {
+        padding-left: 15px;
+    }
+    .title h2 {
+        max-width: 95%;
+    }
+    .title>h4 {
+        float: none;
+    }
+    .title>p {
+        padding-bottom: 20px;
+    }
+    .title div:nth-child(5) {
+        padding-left: 0%;
+    }
+    section {
+        max-width: 100%;
+        margin: 0;
+    }
+    section a {
+        width: 100%;
+        height: auto;
+    }
+    section a>img {
+        height: 35vw;
+    }
+    #hebergement {
+        max-width: 100%;
+        align-items: center;
+        margin: 0;
+        background-color: white;
+        padding: 10px;
+        flex: 1;
+        order: 2;
+    }
+    .populaire {
+        border-radius: 0;
+        width: 100%;
+        align-items: center;
+        margin: 0;
+        order: 1;
+    }
+    .populaire a {
+        width: 90%;
+    }
+    #activites {
+        padding: 0;
+        order: 3;
+    }
+    #activites>div {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    #activites>div>div:nth-child(2n+1) {
+        padding: 10px
+    }
+    #activites div>div:nth-child(2n+1) a {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    #activites div>div:nth-child(2n+1) a img {
+        height: 35vw;
+    }
+    #activites>div>div:nth-child(2n) {
+        width: 100%;
+        margin: 0;
+        padding: 10px
+    }
+    #activites>div>div:nth-child(2n) a {
+        margin: 0;
+    }
+    #activites>div>div:nth-child(2n) a:nth-child(2n+1) {
+        margin-bottom: 20px;
+    }
+    #activites div div a img {
+        height: 35vw;
+    }
+    footer {
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 30px 20px;
+    }
+    footer ul li {
+        padding: 5px 0;
+    }
 }
