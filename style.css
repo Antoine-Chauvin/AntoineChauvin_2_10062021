@@ -34,7 +34,7 @@ p {
 
 h2 {
     width: 100%;
-    margin-left: 2em;
+    padding-left: 30px;
 }
 
 h3 {
@@ -81,14 +81,13 @@ header>img {
     width: 70%;
     height: 35px;
     position: relative;
-    left: -32%;
+    left: -20%;
     top: 10%;
 }
 
 header nav {
     display: flex;
     justify-content: space-evenly;
-   
 }
 
 header nav ul {
@@ -166,6 +165,10 @@ header>a:hover {
     color: white;
 }
 
+.title>div:nth-child(3)>a:nth-child(3) i {
+    visibility: hidden;
+}
+
 .title>div:nth-child(5) {
     display: flex;
     flex-wrap: wrap;
@@ -197,13 +200,14 @@ header>a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: #deebff;
     border-radius: 100px;
-    padding: 20px;
+    padding: 19px;
     z-index: 3;
     transition: transform .3s ease-in;
+    left: -5px;
 }
 
 .title>div:nth-child(5) a span:hover {
@@ -222,8 +226,7 @@ header>a:hover {
     bottom: 28px;
     border: 2px solid #d9d9d9;
     border-radius: 100px;
-    padding: 7px 15px 7px 40px;
-    z-index: 2;
+    padding: 7px 15px 7px 35px;
 }
 
 .point_infos {
@@ -254,7 +257,6 @@ header>a:hover {
     max-width: 60%;
     margin-right: 40px;
     margin-bottom: 40px;
-    padding-top: 22px;
 }
 
 #hebergement h3 {
@@ -272,7 +274,7 @@ header>a:hover {
     background-color: inherit;
     width: 100%;
     height: 3em;
-    padding: 5%;
+    padding: 10px 10px;
     margin: 0;
     box-shadow: none;
 }
@@ -328,14 +330,13 @@ header>a:hover {
     display: block;
     max-width: 100%;
     margin: 0;
-    padding: 22px;
     background-color: white;
 }
 
 #activites div>div:nth-child(2n+1) a {
     height: 440px;
     width: 305px;
-    margin: 0 20px;
+    margin: 0;
 }
 
 #activites div>div:nth-child(2n+1) a img {
@@ -347,15 +348,15 @@ header>a:hover {
 
 #activites>div {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 440px;
 }
 
 #activites div>div:nth-child(2n) {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 25%;
+    justify-content: space-evenly;
+    width: 23%;
     height: 100%;
     margin: 0;
     border-radius: 15px 15px 0 0;
@@ -364,7 +365,8 @@ header>a:hover {
 #activites div>div:nth-child(2n) a {
     flex-direction: column;
     width: 100%;
-    margin: 5px;
+    height: 48%;
+    margin: 0;
 }
 
 #activites div>div:nth-child(2n) a img {
@@ -403,54 +405,55 @@ footer ul li {
 
 /* responsive */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     /* mobile */
     header {
-        height: 140px;
         position: fixed;
-        top: 0;
+        height: 145px;
         background-color: white;
         z-index: 1000;
         width: 100%;
         flex-wrap: wrap;
+        padding: 0;
     }
     header>img {
         height: 50%;
         width: 80%;
-        left: -25%;
+        left: -18%;
         top: 10%;
-        
     }
     header nav {
         width: 100%;
         flex: 1;
         order: 2;
         padding-bottom: 10px;
-        
     }
     header nav>ul {
         height: 50%;
-        width: 780px;
-        justify-content: space-between;
-        position: relative;
-        right: 10%;
-        
-       
-        
+        width: 100%;
+        padding-left: 0;
+        margin-top: 40px;
     }
     header>nav>ul>li {
+        display: flex;
+        justify-content: center;
         width: 100%;
         height: 100%;
-        padding: 50px 18%;
+        padding: 0;
         border-top: none;
-        border-bottom: 3px solid grey ;       
-
     }
-
     header nav>ul>li>a {
-        width: 100%;
+        width: auto;
         font-size: 1.3em;
-        
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 3px solid #d9d9d9;
+        color: black;
+    }
+    .lien_actif {
+        color: #0065fc;
+        border-bottom-color: #0065fc;
     }
     header>a {
         order: 1;
@@ -458,10 +461,9 @@ footer ul li {
         width: 20%;
         font-size: 1.2em;
         position: relative;
-        right: 14%;
+        right: 23%;
         top: 13%;
     }
-
     main {
         display: flex;
         flex-direction: column;
@@ -481,6 +483,17 @@ footer ul li {
     }
     .title>p {
         padding-bottom: 20px;
+    }
+    .title>div:nth-child(3)>a:nth-child(3){
+        border-radius: 10px;
+    }
+    .title>div:nth-child(3)>a:nth-child(3) p {
+        visibility: hidden;
+        display: none;
+    }
+    .title>div:nth-child(3)>a:nth-child(3) i {
+        visibility: visible;
+        color: white;
     }
     .title div:nth-child(5) {
         padding-left: 0%;
@@ -553,8 +566,75 @@ footer ul li {
         flex-direction: column;
         justify-content: space-around;
         padding: 30px 20px;
+        position: relative;
+        top: 140px;
     }
     footer ul li {
         padding: 5px 0;
     }
+}
+
+@media screen and (max-width:1200px) and (min-width:768px) {
+    section a {
+        width: 30%;
+    }
+
+    #hebergement{
+        max-width: 100%;
+        float: none;
+        margin:0 0px 15px 0;
+    }
+
+    .populaire{
+        float: none;
+        width: 100%;
+        flex-direction: row;  
+        margin-bottom: 15px;      
+    }
+    .populaire  a {
+        width: 30%;
+        margin: 10px 0;
+    }
+    .populaire > a h3{
+        margin-top: 5px;
+        height: 45px;
+        overflow: hidden;
+    }
+
+    #activites>div{
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    #activites div > div:nth-child(2n+1) a{
+        width: 98%;
+    }
+    #activites div > div:nth-child(2n){
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        margin: 10px 0;
+    }
+    #activites div > div:nth-child(2n) a{
+        width: 48%;
+    }
+
+    @media screen and (max-width:1064px) and (min-width:768px){
+        .populaire{
+            float: none;
+            width: 100%;
+            flex-direction: column;  
+                 
+        }
+        .populaire  a {
+            width: 100%;
+            
+        }
+        .populaire > a h3{
+            margin-top: 5px;
+            
+        }
+        
+    }
+
 }
