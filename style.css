@@ -47,7 +47,7 @@ section {
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-content: center;
 }
 
@@ -208,6 +208,7 @@ header>a:hover {
     z-index: 3;
     transition: transform .3s ease-in;
     left: -5px;
+    top: 10px;
 }
 
 .title>div:nth-child(5) a span:hover {
@@ -221,12 +222,13 @@ header>a:hover {
 }
 
 .title>div:nth-child(5) a p {
-    display: inline;
+    display: inline-block;
     position: relative;
     bottom: 28px;
     border: 2px solid #d9d9d9;
     border-radius: 100px;
     padding: 7px 15px 7px 35px;
+    height: 38px;
 }
 
 .point_infos {
@@ -254,7 +256,8 @@ header>a:hover {
 
 #hebergement {
     float: left;
-    max-width: 60%;
+    max-width: calc(65% - 40px);
+    min-height: 602.833px;
     margin-right: 40px;
     margin-bottom: 40px;
 }
@@ -348,7 +351,7 @@ header>a:hover {
 
 #activites>div {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 440px;
 }
 
@@ -388,11 +391,13 @@ header>a:hover {
 footer {
     background-color: #F2F2F2;
     margin-top: 3em;
-    padding: 1em 1em;
+    padding: 25px;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    max-width: 1440px;
     justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer ul {
@@ -464,6 +469,9 @@ footer ul li {
         right: 23%;
         top: 13%;
     }
+    header > a:hover{
+        border-top-color: white;
+    }
     main {
         display: flex;
         flex-direction: column;
@@ -484,7 +492,7 @@ footer ul li {
     .title>p {
         padding-bottom: 20px;
     }
-    .title>div:nth-child(3)>a:nth-child(3){
+    .title>div:nth-child(3)>a:nth-child(3) {
         border-radius: 10px;
     }
     .title>div:nth-child(3)>a:nth-child(3) p {
@@ -578,63 +586,73 @@ footer ul li {
     section a {
         width: 30%;
     }
-
-    #hebergement{
+    header > a:hover{
+        border-top-color: white;
+    }
+    #hebergement {
         max-width: 100%;
         float: none;
-        margin:0 0px 15px 0;
+        margin: 0 0px 15px 0;
     }
-
-    .populaire{
+    .populaire {
         float: none;
         width: 100%;
-        flex-direction: row;  
-        margin-bottom: 15px;      
+        flex-direction: row;
+        margin-bottom: 15px;
     }
-    .populaire  a {
+    .populaire a {
         width: 30%;
         margin: 10px 0;
     }
-    .populaire > a h3{
+    .populaire>a h3 {
         margin-top: 5px;
         height: 45px;
         overflow: hidden;
     }
-
-    #activites>div{
+    #activites>div {
         flex-direction: column;
         height: auto;
         width: 100%;
     }
-    #activites div > div:nth-child(2n+1) a{
-        width: 98%;
+    #activites div>div:nth-child(2n+1) a {
+        width: 100%;
     }
-    #activites div > div:nth-child(2n){
+    #activites div>div:nth-child(2n) {
         flex-direction: row;
         width: 100%;
-        justify-content: space-evenly;
+        justify-content: space-between;
         margin: 10px 0;
     }
-    #activites div > div:nth-child(2n) a{
+    #activites div>div:nth-child(2n) a {
         width: 48%;
     }
-
-    @media screen and (max-width:1064px) and (min-width:768px){
-        .populaire{
-            float: none;
-            width: 100%;
-            flex-direction: column;  
-                 
-        }
-        .populaire  a {
-            width: 100%;
-            
-        }
-        .populaire > a h3{
-            margin-top: 5px;
-            
-        }
-        
+    #activites div>div:nth-child(2n) a img{
+        height: 250px;
     }
+    footer{
+        justify-content: space-between;
+    }
+}
 
+@media screen and (max-width:1064px) and (min-width:768px) {
+    header > a:hover{
+        border-top-color: white;
+    }
+    .populaire {
+        float: none;
+        width: 100%;
+        flex-direction: column;
+    }
+    .populaire a {
+        width: 100%;
+    }
+    .populaire>a h3 {
+        margin-top: 5px;
+    }
+    #activites div>div:nth-child(2n) a img{
+        height: 250px;
+    }
+    footer{
+        justify-content: space-between;
+    }
 }
